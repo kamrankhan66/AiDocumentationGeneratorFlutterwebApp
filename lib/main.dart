@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'core/theme/app_theme.dart';
 import 'core/constants/app_constants.dart';
 import 'features/upload/presentation/screens/upload_screen.dart';
 
-void main() {
+Future<void> main() async {
+  // Load environment variables
+  await dotenv.load(fileName: ".env");
   runApp(const MyApp());
 }
 

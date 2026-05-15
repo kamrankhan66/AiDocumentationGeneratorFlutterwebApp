@@ -1,6 +1,8 @@
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+
 class AppConstants {
   // API Configuration
-  static const String geminiApiKey = 'AIzaSyDIxlQguDyin3o1Ki57zxU5esqcJvjaroM';
+  static String get geminiApiKey => dotenv.env['GEMINI_API_KEY'] ?? '';
 
   static const String geminiApiUrl =
       'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent';
