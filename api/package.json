@@ -1,9 +1,0 @@
-{
-  "name": "ai-doc-generator-api",
-  "version": "1.0.0",
-  "description": "Serverless API for AI Documentation Generator",
-  "main": "generate-docs.js",
-  "dependencies": {
-    "@google/generative-ai": "^0.21.0"
-  }
-}
