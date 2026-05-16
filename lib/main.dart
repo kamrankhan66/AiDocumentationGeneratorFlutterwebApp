@@ -7,6 +7,11 @@ import 'features/upload/presentation/screens/upload_screen.dart';
 Future<void> main() async {
   // Load environment variables
   await dotenv.load(fileName: ".env");
+  
+  // Debug: Check if API key is loaded
+  print('🔑 API Key loaded: ${dotenv.env['GEMINI_API_KEY']?.substring(0, 20)}...');
+  print('📁 .env file loaded successfully');
+  
   runApp(const MyApp());
 }
 
