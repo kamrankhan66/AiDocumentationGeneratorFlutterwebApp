@@ -35,7 +35,9 @@ migrate_working_dir/
 .flutter-plugins-dependencies
 .pub-cache/
 .pub/
-/build/
+# Allow web build output (needed for Firebase Hosting / deployment)
+!build/web/
+!build/web/**
 /coverage/
 
 # Symbolication related
