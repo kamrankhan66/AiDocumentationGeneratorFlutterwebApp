@@ -70,7 +70,7 @@ This error occurs when the API key is not properly configured in Google Cloud Co
    ```bash
    # Open .env file
    # Replace with your NEW API key
-   GEMINI_API_KEY=AIzaSyAE7yrMuRlfeDGPHarPDI9Ee2VUEzIUmGQ
+   GEMINI_API_KEY=AIzaSyC2EJEgvp6vfvzuH_naORfjmnjiK7rOdlc
    ```
 
 2. **Restart Your App**
@@ -97,7 +97,7 @@ import 'dart:convert';
 Future<void> testGeminiAPI() async {
   final apiKey = 'YOUR_API_KEY_HERE';
   final url = Uri.parse(
-    'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?key=$apiKey'
+    'https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent?key=$apiKey'
   );
   
   final response = await http.post(

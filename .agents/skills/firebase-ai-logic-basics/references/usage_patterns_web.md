@@ -30,7 +30,7 @@ const generationConfig = {
 };
 
 // Specify the config as part of creating the `GenerativeModel` instance
-const model = getGenerativeModel(ai, { model: "gemini-2.5-flash-lite",  generationConfig });
+const model = getGenerativeModel(ai, { model: "gemini-3.1-flash-lite",  generationConfig });
 ```
 
 ## Core Capabilities
@@ -150,7 +150,7 @@ Enforce a specific JSON schema for the response.
 ```JavaScript
 import { getGenerativeModel, Schema } from "firebase/ai";
 const jsonModel = getGenerativeModel(ai, {
-    model: "gemini-2.5-flash-lite",
+    model: "gemini-3.1-flash-lite",
     generationConfig: {
         responseMimeType: "application/json",
         // Optional: Define a schema

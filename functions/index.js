@@ -29,7 +29,7 @@ exports.generateDocs = functions
 
         // Get API key from secret
         const apiKey = process.env.GEMINI_API_KEY;
-        
+
         if (!apiKey) {
           throw new Error("GEMINI_API_KEY not configured");
         }
@@ -37,12 +37,12 @@ exports.generateDocs = functions
         // Initialize Gemini AI
         const genAI = new GoogleGenerativeAI(apiKey);
         const model = genAI.getGenerativeModel({
-          model: "gemini-1.5-flash",
+          model: "gemini-3.1-flash-lite",
         });
 
         // Get prompt from request body
         const { prompt } = req.body;
-        
+
         if (!prompt) {
           return res.status(400).json({
             success: false,

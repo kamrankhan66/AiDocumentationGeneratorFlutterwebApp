@@ -8,7 +8,7 @@ import '../models/project_info.dart';
 
 class GeminiService {
   static const String _baseUrl = AppConstants.geminiApiUrl;
-  static final String _apiKey = AppConstants.geminiApiKey;
+  static const String _apiKey = AppConstants.geminiApiKey;
 
   Future<String> answerCodebaseQuestion(
     String question,

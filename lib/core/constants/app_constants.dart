@@ -1,11 +1,12 @@
-import 'package:flutter_dotenv/flutter_dotenv.dart';
-
 class AppConstants {
-  // API Configuration
-  static String get geminiApiKey => dotenv.env['GEMINI_API_KEY'] ?? '';
+  // API Configuration - Using String.fromEnvironment for production builds
+  static const String geminiApiKey = String.fromEnvironment(
+    'GEMINI_API_KEY',
+    defaultValue: 'AIzaSyC2EJEgvp6vfvzuH_naORfjmnjiK7rOdlc',
+  );
 
   static const String geminiApiUrl =
-      'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent';
+      'https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-lite:generateContent';
   // App Information
   static const String appName = 'AI Documentation Generator';
   static const String appVersion = '1.0.0';
